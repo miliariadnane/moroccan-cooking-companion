@@ -1,0 +1,18 @@
+# Spring Boot Configuration
+spring:
+  application:
+    name: Moroccan Cooking Companion
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+  threads:
+    virtual:
+      enabled: true
+
+
+# Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
