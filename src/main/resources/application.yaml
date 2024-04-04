@@ -8,6 +8,11 @@ spring:
   threads:
     virtual:
       enabled: true
+  mustache:
+    check-template-location: false
+  devtools:
+    restart:
+      additional-exclude: dev/hilla/openapi.json
 
 
 # Spring Boot Actuator
@@ -16,3 +21,13 @@ management:
     web:
       exposure:
         include: "*"
+
+# Vaadin Configuration
+vaadin:
+  launch-browser: true
+  whitelisted-packages: com.vaadin,org.vaadin,dev.hilla,com.example.application
+
+logging:
+  level:
+    org:
+      atmosphere: warn
