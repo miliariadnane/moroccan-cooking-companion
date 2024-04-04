@@ -3,6 +3,7 @@ package dev.nano.mcc;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.messages.SystemMessage;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.SystemPromptTemplate;
@@ -24,13 +25,10 @@ public class MCCAssistant {
 
     private final OpenAIClient openAIClient;
 
-    public String getRecipes(String query) {
-        Message systemMessage = new SystemPromptTemplate(this.systemPrompt)
-                .createMessage(Map.of("current_date", java.time.LocalDate.now()));
+    public String getRecipes(String dishName) {
 
-        log.info("System Message: {}", systemMessage.getContent());
-
-        UserMessage userMessage = new UserMessage(query);
+        SystemMessage systemMessage = new SystemMessage(this.systemPrompt);
+        UserMessage userMessage = new UserMessage("Can you provide a recipe for + " + dishName + "?");
 
         Prompt prompt = new Prompt(List.of(systemMessage, userMessage));
 

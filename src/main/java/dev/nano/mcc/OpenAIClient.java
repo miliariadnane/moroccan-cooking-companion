@@ -8,6 +8,7 @@ import org.springframework.ai.openai.OpenAiImageOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.ai.openai.api.OpenAiImageApi;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -27,10 +28,11 @@ public final class OpenAIClient {
     public OpenAiImageClient getOpenAiImageClient() {
         OpenAiImageApi openAiApi = new OpenAiImageApi(apiKey);
         var options = OpenAiImageOptions.builder()
+                .withQuality("hd")
                 .withHeight(1024).withWidth(1024)
                 .withResponseFormat("url")
                 .withModel("dall-e-3")
                 .build();
-        return new OpenAiImageClient(openAiApi,options, null);
+        return new OpenAiImageClient(openAiApi, options, RetryTemplate.builder().build());
     }
 }
