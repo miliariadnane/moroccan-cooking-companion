@@ -1,7 +1,8 @@
-package dev.nano.mcc;
+package dev.nano.mcc.client;
 
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.BrowserCallable;
+import dev.nano.mcc.MCCAssistant;
 
 @BrowserCallable
 @AnonymousAllowed
