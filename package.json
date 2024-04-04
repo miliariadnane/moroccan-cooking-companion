@@ -28,13 +28,17 @@
   "devDependencies": {
     "@rollup/plugin-replace": "5.0.4",
     "@rollup/pluginutils": "5.0.5",
+    "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react": "4.2.0",
     "@vitejs/plugin-react-swc": "3.5.0",
     "async": "3.2.4",
+    "autoprefixer": "^10.4.19",
     "glob": "10.3.3",
+    "postcss": "^8.4.38",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "5.9.2",
     "strip-css-comments": "5.0.0",
+    "tailwindcss": "^3.4.3",
     "transform-ast": "2.4.4",
     "typescript": "5.3.3",
     "vite": "5.0.6",
@@ -85,7 +89,7 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "9c7cb9f2a58c2abfcde023175f6b4e1679894efff72f3472ede778a0c895eea9"
+    "hash": "5e5fbd4dd53113e5d42d8c101acffb7df5c4533382e926b2c9bd8110871a61ca"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
