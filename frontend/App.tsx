@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {Fragment, useState} from "react";
 import {MCCService} from "Frontend/generated/endpoints";
 import Footer from "Frontend/components/Footer";
 import Navbar from "Frontend/components/Navbar";
@@ -18,14 +18,17 @@ export default function App() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-white text-black font-sans">
-            <Navbar/>
-            <main className="flex flex-col items-center justify-center flex-grow p-16 md:p-32">
-                <div className="flex flex-col items-center justify-center space-y-6 w-full md:w-3/4 lg:w-1/2">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Moroccan Cooking Companion 🇲🇦🍽️</h1>
-                    <div
-                        className="w-full flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-                        <div className="flex-1">
+            <div className="flex min-h-screen flex-col bg-white font-sans text-black">
+                <Navbar/>
+                <main
+                    className="mx-auto flex-grow flex-col py-16 px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col items-center justify-center space-y-6">
+                        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+                            Moroccan Cooking Companion 🇲🇦🍽️
+                        </h1>
+                        <div
+                            className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+                        <div className="flex-1 max-w-3xl">
                             <label className="block mb-2 font-medium text-black-700"
                                    htmlFor="dish-name">
                                 Enter the name of a Moroccan dish:
@@ -48,24 +51,24 @@ export default function App() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:w-3/4 lg:w-1/2">
-                    <div className="h-96 md:h-128 border-2 border-gray-200 rounded-lg p-4">
-                        <h2 className="text-2xl font-bold mb-4">Dish Image</h2>
-                        <img
-                            alt="Moroccan Dish"
-                            className="w-full h-full object-cover rounded-lg"
+                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-5">
+                        <div className="col-span-2 rounded-lg border-2 border-gray-200 p-4">
+                            <h2 className="mb-4 text-2xl font-bold">Dish Image</h2>
+                            <img
+                                alt="Moroccan Dish"
+                                className="aspect-square min-h-80 rounded-lg object-cover"
                             src={dishImage}
                         />
                     </div>
-                    <div className="h-96 md:h-128 border-2 border-gray-200 rounded-lg p-4 space-y-4">
-                        <h2 className="text-2xl font-bold mb-4">Recipes</h2>
-                        <pre className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+                    <div className="col-span-3 space-y-4 rounded-lg border-2 border-gray-200 p-4">
+                        <h2 className="mb-4 text-2xl font-bold">Recipes</h2>
+                        <p className="whitespace-pre-wrap leading-relaxed text-gray-700">
                             {recipe}
-                        </pre>
+                        </p>
                     </div>
-                </div>
-            </main>
-            <Footer/>
+                    </div>
+                </main>
+                <Footer/>
         </div>
     );
 }
