@@ -2,13 +2,14 @@ import {Fragment, useState} from "react";
 import {MCCService} from "Frontend/generated/endpoints";
 import Footer from "Frontend/components/Footer";
 import Navbar from "Frontend/components/Navbar";
+import ReactMarkdown from 'react-markdown';
 
 
 export default function App() {
 
     const [dishName, setDishName] = useState('');
     const [recipe, setRecipe] = useState('');
-    const [dishImage, setDishImage] = useState('/placeholder.svg');
+    const [dishImage, setDishImage] = useState('');
 
     const handleGenerateClick = () => {
         if (dishName) {
@@ -62,9 +63,9 @@ export default function App() {
                     </div>
                     <div className="col-span-3 space-y-4 rounded-lg border-2 border-gray-200 p-4">
                         <h2 className="mb-4 text-2xl font-bold">Recipes</h2>
-                        <p className="whitespace-pre-wrap leading-relaxed text-gray-700">
+                        <ReactMarkdown className="whitespace-pre-wrap leading-relaxed text-gray-700">
                             {recipe}
-                        </p>
+                        </ReactMarkdown>
                     </div>
                     </div>
                 </main>

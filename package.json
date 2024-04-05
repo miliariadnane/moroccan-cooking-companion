@@ -23,7 +23,8 @@
     "@vaadin/common-frontend": "0.0.19",
     "@vaadin/router": "1.7.5",
     "construct-style-sheets-polyfill": "3.1.0",
-    "lit": "3.1.0"
+    "lit": "3.1.0",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "5.0.4",

@@ -1,21 +1,19 @@
 ## Moroccan Cooking Companion 🇲🇦🍽️
 
-> This is a simple web application that allows users to search for traditional Moroccan dishes and get the recipe with images. 
-> The application is built using Spring Boot / Spring AI, Hilla from Vaadin.
+> A web application that allows users to search for traditional Moroccan dishes and retrieve their recipes along with mouthwatering images. Built with Spring Boot, Spring AI, and Hilla from Vaadin for a seamless and user-friendly experience.
 
-
-💡 This application is not business oriented and my focus is mostly on technical part, I just want to play with [Spring AI 🍃](https://github.com/spring-projects/spring-ai) and [Vaadin's Hilla ⚛️](https://hilla.dev/) project.
+💡 This project is focused on learning and experimenting with the [Spring AI 🍃](https://github.com/spring-projects/spring-ai) and [Vaadin's Hilla ⚛️](https://hilla.dev/) technologies. It's not aimed at building a business application but rather serves as a playground to explore the capabilities of these innovative frameworks and gain hands-on experience with AI engineering and seamless Spring Boot-React integration.
 
 🌀 This Application is `in-progress` and I will add new features over time.
 
 ## Application Screenshot
 
-![Moroccan Cooking Companion]()
+![Moroccan Cooking Companion](docs/app.png)
 
 ## Features
 
 - ✅ Search for traditional Moroccan dishes
-- ✅ Get the recipe with images
+- ✅ Get the recipes with image
 
 ## Tech Stack
 
