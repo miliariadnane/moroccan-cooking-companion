@@ -5,6 +5,7 @@ spring:
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
+      base-url: "https://api.openai.com"
   threads:
     virtual:
       enabled: true

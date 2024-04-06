@@ -90,7 +90,7 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "5e5fbd4dd53113e5d42d8c101acffb7df5c4533382e926b2c9bd8110871a61ca"
+    "hash": "f8066539e4cc22a3732de4ff0d7e11656534a506924d1d154b74227df0fac37c"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -113,6 +113,7 @@
     "@hilla/generator-typescript-plugin-subtypes": "$@hilla/generator-typescript-plugin-subtypes",
     "@hilla/react-crud": "$@hilla/react-crud",
     "@hilla/generator-typescript-plugin-backbone": "$@hilla/generator-typescript-plugin-backbone",
-    "@hilla/generator-typescript-cli": "$@hilla/generator-typescript-cli"
+    "@hilla/generator-typescript-cli": "$@hilla/generator-typescript-cli",
+    "react-markdown": "$react-markdown"
   }
 }
